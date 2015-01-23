@@ -17,6 +17,9 @@ RUN apt-get -y install oracle-java8-installer && apt-get clean
 # Maven Version
 ENV MAVEN_VERSION 3.2.2
 
+# Slave Name
+ENV SLAVE_ID JAVA
+
 # Install Maven
 # install wget
 RUN apt-get install -y wget

@@ -30,5 +30,5 @@ RUN wget --no-verbose -O /tmp/maven.tar.gz http://archive.apache.org/dist/maven/
 # install maven
 RUN tar xzf /tmp/maven.tar.gz -C /opt/
 ENV MAVEN_HOME /opt/maven
-
-CMD ["/usr/sbin/sshd", "-D"]
+ADD run.sh /home/jenkins/
+CMD ["sh", "/home/jenkins/run.sh"]

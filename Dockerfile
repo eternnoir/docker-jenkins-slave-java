@@ -19,6 +19,7 @@ ENV MAVEN_VERSION 3.2.2
 
 # Slave Name
 ENV SLAVE_ID JAVA
+ENV MASTER_ADDR
 
 # Install Maven
 # install wget

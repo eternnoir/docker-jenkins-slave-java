@@ -8,6 +8,9 @@ MAINTAINER Frank Wang "eternnoir@gmail.com"
 # Maven Version
 ENV MAVEN_VERSION 3.2.2
 
+# Slave Name
+ENV SLAVE_ID JAVA
+
 # Install Maven
 # install wget
 RUN apt-get install -y wget
@@ -18,5 +21,5 @@ RUN wget --no-verbose -O /tmp/maven.tar.gz http://archive.apache.org/dist/maven/
 # install maven
 RUN tar xzf /tmp/maven.tar.gz -C /opt/
 ENV MAVEN_HOME /opt/maven
-
-CMD ["/usr/sbin/sshd", "-D"]
+ADD run.sh /home/jenkins/
+CMD ["sh", "/home/jenkins/run.sh"]

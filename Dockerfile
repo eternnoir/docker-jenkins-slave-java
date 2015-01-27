@@ -2,7 +2,7 @@
 # Jenkins Slave Java image with ubuntu
 #
 # Pull base image.
-FROM eternnoir/ubuntu-java
+FROM eternnoir/ubuntu-java:oracle-java8
 MAINTAINER Frank Wang "eternnoir@gmail.com"
 
 # Maven Version

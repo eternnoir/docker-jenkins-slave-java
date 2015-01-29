@@ -8,6 +8,8 @@
 * oracle-java8
 
 ## Run
+You should create a slave node at Jenkins master. Then run this slave image use environment *SLAVE_ID* and *MASTER_ADDR* let container connet to Jenkins master automatically.
+
 ```
-docker run -d -e SLAVE_ID=<slaveId> -e MASTER_ADDR=<master_jekinsIP> eternnoir/jenkins-slave-java
+docker run -d -e SLAVE_ID=<slaveId> -e MASTER_ADDR=<master_jekinsIP:Port> eternnoir/jenkins-slave-java
 ```

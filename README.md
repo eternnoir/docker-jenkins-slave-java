@@ -13,3 +13,9 @@ You should create a slave node at Jenkins master. Then run this slave image use 
 ```
 docker run -d -e SLAVE_ID=<slaveId> -e MASTER_ADDR=<master_jekinsIP:Port> eternnoir/jenkins-slave-java
 ```
+
+If your node need secret key.
+```
+docker run -d -e SLAVE_ID=<slaveId> -e MASTER_ADDR=<master_jekinsIP:Port> -e SECRET=<secret_key> \
+          eternnoir/jenkins-slave-java
+```
